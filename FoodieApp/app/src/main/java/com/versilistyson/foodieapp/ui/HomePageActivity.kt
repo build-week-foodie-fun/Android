@@ -1,7 +1,8 @@
-package com.versilistyson.foodieapp
+package com.versilistyson.foodieapp.ui
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.versilistyson.foodieapp.R
 
 class HomePageActivity : AppCompatActivity() {
 
