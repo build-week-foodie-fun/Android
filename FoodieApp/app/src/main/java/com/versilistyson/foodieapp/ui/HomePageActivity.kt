@@ -1,5 +1,6 @@
 package com.versilistyson.foodieapp.ui
 
+import android.app.Activity
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -18,13 +19,13 @@ class HomePageActivity : AppCompatActivity() {
 
         add_review_fab.setOnClickListener {
             val intent = Intent(Intent.ACTION_GET_CONTENT)
-            intent.setType("image/*")
+            intent.type = "image/*"
             startActivityForResult(Intent.createChooser(intent, "Select Picture"), imageRequestCode)
         }
     }
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
-        if (requestCode == imageRequestCode) {
+        if (requestCode == imageRequestCode && resultCode == Activity.RESULT_OK) {
             //TODO: Open up activity or fragment for adding in data
         }
         super.onActivityResult(requestCode, resultCode, data)
