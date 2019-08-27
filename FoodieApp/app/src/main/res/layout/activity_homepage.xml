@@ -56,11 +56,13 @@
                         android:layout_width="0dp"
                         android:layout_height="match_parent"/>
                 <ImageView
+                        android:padding="10dp"
                         android:src="@drawable/bell"
                         android:layout_weight="20"
                         android:layout_width="0dp"
                         android:layout_height="match_parent"/>
                 <ImageView
+                        android:padding="10dp"
                         android:src="@drawable/ic_search_black_24dp"
                         android:layout_weight="20"
                         android:layout_width="0dp"
