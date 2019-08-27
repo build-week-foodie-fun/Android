@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">FoodieApp</string>
     <string name="sampletext">sample_text</string>
+    <string name="a_tasty_burger_joint">\"a tasty burger joint\"</string>
 </resources>

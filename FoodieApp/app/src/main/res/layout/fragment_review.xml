@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.cardview.widget.CardView
+        android:id="@+id/review"
         android:elevation="10dp"
-        app:cardCornerRadius="12dp"
+        app:cardCornerRadius="8dp"
         android:layout_margin="4dp"
         xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="wrap_content"
@@ -17,15 +18,21 @@
             android:id="@+id/item_number"
             android:layout_width="match_parent"
             android:layout_height="100dp"
-            android:textAppearance="?attr/textAppearanceListItem"/>
+    />
 
     <TextView
-            gra
             android:textAlignment="center"
-            android:text="A tasty burger joint"
+            android:id="@+id/card_view_image_title"
+            android:gravity="center"
+            android:text="@string/a_tasty_burger_joint"
             android:layout_width="match_parent"
-            android:layout_height="30dp"/>
+            android:layout_height="50dp"
+            android:layout_gravity="center_horizontal"
+            android:textSize="16sp"/>
     <androidx.appcompat.widget.AppCompatRatingBar
+            android:rating="3"
+            android:layout_gravity="center"
+            android:numStars="3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"/>
  </LinearLayout>
