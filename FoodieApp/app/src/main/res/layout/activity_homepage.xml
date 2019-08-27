@@ -19,16 +19,26 @@
                 android:layout_height="wrap_content">
            <androidx.constraintlayout.widget.ConstraintLayout
                    android:layout_width="match_parent"
-                   android:layout_height="match_parent">
+                   android:layout_height="80dp">
                <ImageView
-                       android:layout_marginTop="32dp"
+                       android:layout_marginTop="42dp"
                        android:id="@+id/homepage_back_button"
                        android:src="@drawable/ic_chevron_left_black_24dp"
                        app:layout_constraintTop_toTopOf="parent"
                        app:layout_constraintLeft_toLeftOf="parent"
                        app:layout_constraintBottom_toBottomOf="parent"
-                       android:layout_width="45dp"
-                       android:layout_height="45dp"/>
+                       android:layout_width="42dp"
+                       android:layout_height="match_parent"/>
+               <ImageView
+                       android:layout_marginTop="42dp"
+                       android:layout_marginRight="16dp"
+                       android:layout_width="36dp"
+                       android:layout_height="match_parent"
+                       android:src="@drawable/ic_menu_black_24dp"
+                       app:layout_constraintTop_toTopOf="parent"
+                       app:layout_constraintBottom_toBottomOf="parent"
+                       app:layout_constraintRight_toRightOf="parent"
+               />
 
            </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -141,6 +151,15 @@
 
                 android:layout_height="wrap_content">
             <LinearLayout
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintTop_toBottomOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    android:weightSum="99"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+            <LinearLayout
+                    android:layout_weight="33"
                     android:gravity="center"
                     android:id="@+id/friends"
                     android:layout_marginTop="16dp"
@@ -152,10 +171,11 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content">
                 <TextView
+                        android:id="@+id/num_of_friends"
                         android:textColor="@color/colorBlack"
                         android:textAlignment="center"
                         android:textStyle="bold"
-                        android:text="@string/sampletext"
+                        android:text="900"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"/>
                 <TextView
@@ -163,13 +183,14 @@
                         android:textAlignment="center"
                         android:textSize="10sp"
                         android:layout_marginTop="8dp"
-                        android:text="@string/sampletext"
+                        android:text="Friends"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"/>
 
             </LinearLayout>
 
             <LinearLayout
+                    android:layout_weight="33"
                     android:gravity="center"
                     android:id="@+id/followers"
                     android:layout_marginTop="16dp"
@@ -181,10 +202,11 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content">
                 <TextView
+                        android:id="@+id/num_of_followers"
                         android:textColor="@color/colorBlack"
                         android:textAlignment="center"
                         android:textStyle="bold"
-                        android:text="@string/sampletext"
+                        android:text="1,500"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"/>
                 <TextView
@@ -192,13 +214,14 @@
                         android:textAlignment="center"
                         android:textSize="10sp"
                         android:layout_marginTop="8dp"
-                        android:text="@string/sampletext"
+                        android:text="Followers"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"/>
 
             </LinearLayout>
 
             <LinearLayout
+                    android:layout_weight="33"
                     android:gravity="center"
                     android:id="@+id/posts"
                     android:layout_marginRight="32dp"
@@ -210,10 +233,11 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content">
                 <TextView
+                        android:id="@+id/num_of_posts"
                         android:textColor="@color/colorBlack"
                         android:textAlignment="center"
                         android:textStyle="bold"
-                        android:text="@string/sampletext"
+                        android:text="40"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"/>
                 <TextView
@@ -221,12 +245,12 @@
                         android:textAlignment="center"
                         android:textSize="10sp"
                         android:layout_marginTop="8dp"
-                        android:text="@string/sampletext"
+                        android:text="Posts"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"/>
 
             </LinearLayout>
-
+            </LinearLayout>
         </androidx.constraintlayout.widget.ConstraintLayout>
 
         <com.google.android.material.floatingactionbutton.FloatingActionButton
