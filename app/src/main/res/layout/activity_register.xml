@@ -9,8 +9,8 @@
 
     <ImageView
         android:id="@+id/iv_logo"
-        android:layout_width="184dp"
-        android:layout_height="184dp"
+        android:layout_width="176dp"
+        android:layout_height="176dp"
         android:src="@drawable/foodie_icon"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
