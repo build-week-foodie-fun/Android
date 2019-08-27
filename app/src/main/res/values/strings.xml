@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Foodie App</string>
+    <string name="app_name">FoodieApp</string>
     <string name="title_activity_create_new_entry">CreateNewEntryActivity</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
