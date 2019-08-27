@@ -10,7 +10,6 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 
-import com.versilistyson.foodieapp.dummy.DummyContent
 import com.versilistyson.foodieapp.dummy.DummyContent.DummyItem
 
 /**
