@@ -1,9 +1,10 @@
 package com.example.foodiefun
 
 import android.net.Uri
+import java.io.Serializable
 
 class FoodEntry(id:Int,restaurant_name:String,restaurant_type:String,item_name:
-String,photoUri:Uri,food_rating:Int,comments:String,price:Double,wait_time:String,date_of_visit:String){
+String,photoUri:Uri,food_rating:Int,comments:String,price:Double,wait_time:String,date_of_visit:String):Serializable{
 
     val id=id
     var restaurant_name=restaurant_name
