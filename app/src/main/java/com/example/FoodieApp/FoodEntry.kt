@@ -1,4 +1,4 @@
-package com.example.foodiefun
+package com.example.FoodieApp
 
 import android.net.Uri
 import java.io.Serializable
