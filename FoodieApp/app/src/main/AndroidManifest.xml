@@ -21,10 +21,9 @@
         <activity
                 android:name="ui.HomePageActivity"
                 android:theme="@style/HomePageTheme">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN"/>
-            </intent-filter>
         </activity>
+        <activity android:name=".ui.RegisterActivity"/>
+        <activity android:name=".CreateNewEntryActivity"/>
     </application>
 
 </manifest>
