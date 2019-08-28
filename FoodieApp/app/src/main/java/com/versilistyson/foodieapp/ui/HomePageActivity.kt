@@ -5,9 +5,14 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.versilistyson.foodieapp.R
+import com.versilistyson.foodieapp.ReviewListFragment
 import kotlinx.android.synthetic.main.activity_homepage.*
 
-class HomePageActivity : AppCompatActivity() {
+class HomePageActivity : AppCompatActivity(), ReviewListFragment.OnListFragmentInteractionListener  {
+    override fun onListFragmentInteraction(item: DummyItem?) {
+        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+    }
+
 
     companion object {
         const val imageRequestCode = 0

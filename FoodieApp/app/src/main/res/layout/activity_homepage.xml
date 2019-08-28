@@ -13,6 +13,7 @@
             android:layout_height="wrap_content">
 
         <androidx.appcompat.widget.Toolbar
+                android:background="#ffff"
                 android:id="@+id/toolbar_top"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
@@ -51,6 +52,7 @@
             android:layout_height="wrap_content">
 
         <androidx.appcompat.widget.Toolbar
+                android:background="#ffff"
                 android:id="@+id/toolbar_bottom"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
