@@ -19,7 +19,7 @@ class RatingCustomView(context: Context, attrs: AttributeSet): LinearLayout(cont
         val attributes = context.obtainStyledAttributes(attrs, R.styleable.RatingCustomView)
         textView.text = when {
             ratingBar.numStars == 1 -> "Awful!"
-            ratingBar.numStars == 2 -> "Meh"
+            ratingBar.numStars == 2 -> "Meh..."
             else -> "Excellent"
         }
         attributes.recycle()
