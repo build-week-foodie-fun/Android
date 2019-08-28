@@ -6,12 +6,7 @@
     </shared>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="760ba7df-ae70-4755-81a2-97068f229c42" name="Default Changelist" comment="NewEntryActivity">
-      <change beforePath="$PROJECT_DIR$/../.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/versilistyson/foodieapp/CreateNewEntryActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/versilistyson/foodieapp/CreateNewEntryActivity.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/versilistyson/foodieapp/FoodEntry.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/versilistyson/foodieapp/FoodEntry.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/res/layout/activity_create_new_entry.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/res/layout/activity_create_new_entry.xml" afterDir="false" />
-    </list>
+    <list default="true" id="760ba7df-ae70-4755-81a2-97068f229c42" name="Default Changelist" comment="NewEntryActivity" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -146,7 +141,7 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="175" />
     <option name="width" value="1750" />
     <option name="height" value="970" />
@@ -305,8 +300,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="1550" height="838" extended-state="7" />
-    <editor active="true" />
+    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <layout>
       <window_info id="Captures" order="0" side_tool="true" weight="0.25" />
       <window_info active="true" content_ui="combo" id="Project" order="1" visible="true" weight="0.3295302" />
