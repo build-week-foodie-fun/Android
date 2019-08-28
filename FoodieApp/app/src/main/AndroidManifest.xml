@@ -19,7 +19,7 @@
             </intent-filter>
         </activity>
         <activity
-                android:name=".HomePageActivity"
+                android:name="ui.HomePageActivity"
                 android:theme="@style/HomePageTheme">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
