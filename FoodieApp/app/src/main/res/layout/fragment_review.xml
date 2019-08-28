@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.cardview.widget.CardView
-        android:id="@+id/review"
+        android:id="@+id/cv"
         android:elevation="10dp"
         app:cardCornerRadius="8dp"
         android:layout_margin="4dp"
@@ -15,14 +15,14 @@
     <ImageView
             android:scaleType="centerCrop"
             android:src="@drawable/thats_a_tasty_burger"
-            android:id="@+id/item_number"
+            android:id="@+id/cv_image_view"
             android:layout_width="match_parent"
             android:layout_height="100dp"
     />
 
     <TextView
             android:textAlignment="center"
-            android:id="@+id/card_view_image_title"
+            android:id="@+id/cv_textview"
             android:gravity="center"
             android:text="@string/a_tasty_burger_joint"
             android:layout_width="match_parent"
@@ -30,6 +30,7 @@
             android:layout_gravity="center_horizontal"
             android:textSize="16sp"/>
     <androidx.appcompat.widget.AppCompatRatingBar
+            android:id="@+id/cv_rating_bar"
             android:rating="3"
             android:layout_gravity="center"
             android:numStars="3"
