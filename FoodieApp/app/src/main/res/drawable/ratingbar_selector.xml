@@ -1,21 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layer-list xmlns:android="http://schemas.android.com/apk/res/android">
     <item
-        android:height="30dp"
-        android:width="30dp"
          android:id="@android:id/background"
-         android:drawable="@drawable/clear"
+         android:drawable="@drawable/empty_star"
         />
     <item
         android:id="@android:id/secondaryProgress"
-        android:drawable="@drawable/burger"
-        android:height="30dp"
-        android:width="30dp"
+        android:drawable="@drawable/empty_star"
         />
     <item
-        android:height="30dp"
-        android:width="30dp"
         android:id="@android:id/progress"
-        android:drawable="@drawable/burger"
+        android:drawable="@drawable/burger_star"
         />
 </layer-list>
