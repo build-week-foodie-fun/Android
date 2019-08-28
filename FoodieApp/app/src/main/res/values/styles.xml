@@ -15,4 +15,13 @@
         <item name="colorAccent">@color/colorWhite</item>
     </style>
 
+    <style name="FoodRatingBar" parent="@android:style/Widget.RatingBar">
+        <!-- Customize your theme here. -->
+        <item name="android:progressDrawable">@drawable/ratingbar_selector</item>
+        <item name="android:minHeight">50dp</item>
+        <item name="android:maxHeight">50dp</item>
+    </style>
+
+    
+
 </resources>
