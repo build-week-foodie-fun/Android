@@ -8,20 +8,20 @@ import android.widget.LinearLayout
 import android.widget.LinearLayout.VERTICAL
 import android.widget.RatingBar
 import android.widget.TextView
+import kotlinx.android.synthetic.main.custom_rating_bar_layout.view.*
 
-class RatingCustomView : View {
-    constructor(context: Context): super(context)
-    constructor(context: Context, attrs: AttributeSet): super(context, attrs)
-    constructor(context: Context, attrs: AttributeSet, defStyleAttr: Int): super(context, attrs, defStyleAttr)
-    constructor(context: Context, attrs: AttributeSet, defStyleAttr: Int, defStyleRes: Int): super(context, attrs, defStyleAttr, defStyleRes)
-
+class RatingCustomView(context: Context, attrs: AttributeSet): LinearLayout(context, attrs) {
     init {
-        val mLinearLayout = LinearLayout(context)
-        val foodRatingBar = LayoutInflater.from(context).inflate(R.layout.custom_rating_bar_layout,mLinearLayout , false) as RatingBar
-        val ratingText = LayoutInflater.from(context).inflate(R.layout.food_ratingbar_textview, mLinearLayout, false) as TextView
+        val ratingBarLayout = LayoutInflater.from(context).inflate(R.layout.custom_rating_bar_layout, this, false) as LinearLayout
+        val textView = ratingBarLayout.rating_tv
+        val ratingBar = ratingBarLayout.rating_bar
 
-        mLinearLayout.orientation = VERTICAL
-        mLinearLayout.addView(foodRatingBar)
-        mLinearLayout.addView(ratingText)
+        val attributes = context.obtainStyledAttributes(attrs, R.styleable.RatingCustomView)
+        textView.text = when {
+            ratingBar.numStars == 1 -> "Awful!"
+            ratingBar.numStars == 2 -> "Meh"
+            else -> "Excellent"
+        }
+        attributes.recycle()
     }
 }

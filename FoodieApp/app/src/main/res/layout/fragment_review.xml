@@ -2,7 +2,7 @@
 <androidx.cardview.widget.CardView
         android:id="@+id/cv"
         android:elevation="10dp"
-        app:cardCornerRadius="8dp"
+        app:cardCornerRadius="4dp"
         android:layout_margin="4dp"
         xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="wrap_content"
@@ -21,6 +21,7 @@
     />
 
     <TextView
+            android:fontFamily="@font/montserrat_lightitalic"
             android:textAlignment="center"
             android:id="@+id/cv_textview"
             android:gravity="center"
@@ -29,7 +30,10 @@
             android:layout_height="50dp"
             android:layout_gravity="center_horizontal"
             android:textSize="16sp"/>
-    <com.versilistyson.foodieapp.RatingCustomView android:layout_width="match_parent"
-                                                  android:layout_height="wrap_content"/>
+   <com.versilistyson.foodieapp.RatingCustomView
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content">
+
+   </com.versilistyson.foodieapp.RatingCustomView>
  </LinearLayout>
 </androidx.cardview.widget.CardView>
