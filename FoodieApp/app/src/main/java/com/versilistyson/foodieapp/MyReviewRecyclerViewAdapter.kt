@@ -10,8 +10,6 @@ import android.widget.TextView
 import com.versilistyson.foodieapp.ReviewListFragment.OnListFragmentInteractionListener
 import com.versilistyson.foodieapp.dummy.DummyContent.DummyItem
 
-import kotlinx.android.synthetic.main.fragment_review.view.*
-
 /**
  * [RecyclerView.Adapter] that can display a [DummyItem] and makes a call to the
  * specified [OnListFragmentInteractionListener].
@@ -35,7 +33,7 @@ class MyReviewRecyclerViewAdapter(
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         val view = LayoutInflater.from(parent.context)
-            .inflate(R.layout.fragment_review, parent, false)
+            .inflate(R.layout.review_item, parent, false)
         return ViewHolder(view)
     }
 
