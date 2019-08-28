@@ -4,7 +4,7 @@ import android.net.Uri
 import java.io.Serializable
 
 class FoodEntry(id:Int,restaurant_name:String,restaurant_type:String,item_name:
-String,photoUri:Uri,food_rating:Int,comments:String,price:Double,wait_time:String,date_of_visit:String):Serializable{
+String,photoUri:Uri?,food_rating:Int,comments:String,price:String,date_of_visit:String):Serializable{
 
     val id=id
     var restaurant_name=restaurant_name
@@ -14,7 +14,6 @@ String,photoUri:Uri,food_rating:Int,comments:String,price:Double,wait_time:Strin
     var food_rating=food_rating
     var comments=comments
     var price=price
-    var wait_time=wait_time
     var date_of_visit=date_of_visit
 
 }
