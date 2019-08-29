@@ -42,7 +42,7 @@ class ReviewListFragment : Fragment() {
     //Populate views after the layout has been inflated
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        list_recycler_view.apply {
+        view.list_recycler_view.apply {
             layoutManager = GridLayoutManager(context, 2)
             adapter = MyReviewRecyclerViewAdapter(CreateNewEntryActivity.foodEntries, listener)
         }

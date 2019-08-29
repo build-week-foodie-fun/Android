@@ -21,7 +21,7 @@ class HomePageActivity : AppCompatActivity(), ReviewListFragment.OnListFragmentI
             startActivity(createNewEntryIntent)
         }
     }
-
+    
     override fun onListFragmentInteraction(item: FoodEntry?) {
 
     }
