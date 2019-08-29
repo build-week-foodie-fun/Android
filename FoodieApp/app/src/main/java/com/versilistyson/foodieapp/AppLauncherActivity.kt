@@ -22,12 +22,12 @@ class AppLauncherActivity : AppCompatActivity() {
 
         signIn.setOnClickListener {
             var signInIntent = Intent(this, HomePageActivity::class.java)
-            startActivityForResult(signInIntent, REQUEST_HOMEPAGE)
+            startActivity(signInIntent)
         }
 
         register.setOnClickListener {
             var registerIntent = Intent(this, RegisterActivity::class.java)
-            startActivityForResult(registerIntent, REQUEST_REGISTRATION)
+            startActivity(registerIntent)
         }
     }
 }
