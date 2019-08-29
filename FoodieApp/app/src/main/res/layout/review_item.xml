@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.cardview.widget.CardView
+        android:background="@color/colorWhite"
         android:id="@+id/cv"
         android:elevation="10dp"
         app:cardCornerRadius="4dp"
@@ -31,7 +32,7 @@
             android:layout_gravity="center_horizontal"
             android:textSize="16sp"/>
    <com.versilistyson.foodieapp.RatingCustomView
-           android:id="@+id/cv_rating_bar"
+           android:id="@+id/cv_ratingbar"
            android:layout_gravity="center"
            android:layout_width="wrap_content"
            android:layout_height="wrap_content">

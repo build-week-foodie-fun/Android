@@ -14,12 +14,13 @@ import android.widget.TextView
 class RatingCustomView(context: Context, attrs: AttributeSet): LinearLayout(context, attrs) {
     init {
         orientation = VERTICAL
-        val ratingBar = RatingBar(ContextThemeWrapper(context, R.style.FoodRatingBar))
+        val contextThemeWrapper = ContextThemeWrapper(context, R.style.FoodRatingBar)
+        val ratingBar = RatingBar(contextThemeWrapper)
         ratingBar.numStars = 3
         ratingBar.rating = 1f
         ratingBar.stepSize = 1f
         ratingBar.isIndicator
-        val textView = TextView(context) as TextView
+        val textView = TextView(context)
         textView.textAlignment = View.TEXT_ALIGNMENT_CENTER
         textView.textSize = 16f
         textView.text = when {
