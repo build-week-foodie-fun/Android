@@ -19,7 +19,7 @@ class RatingCustomView(context: Context, attrs: AttributeSet): LinearLayout(cont
         ratingBar.numStars = 3
         ratingBar.rating = 1f
         ratingBar.stepSize = 1f
-
+        addView(ratingBar)
 
         val textView = TextView(context) as TextView
         textView.textAlignment = View.TEXT_ALIGNMENT_CENTER
@@ -29,9 +29,9 @@ class RatingCustomView(context: Context, attrs: AttributeSet): LinearLayout(cont
             ratingBar.numStars == 2 -> "Meh..."
             else -> "Tasty!"
         }
+        addView(textView)
 
-        addView(ratingBar) as RatingBar
-        addView(textView) as TextView
+
 
     }
 
