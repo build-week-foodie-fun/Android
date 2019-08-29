@@ -49,7 +49,7 @@ class MyReviewRecyclerViewAdapter(
         holder.foodImage.setImageURI(item.photoUri)
         holder.foodDetail.text = item.item_name
         //TODO: Add attributes to RatingCustomView so we can pass the food rating to the recycler
-        //holder.ratingBar = item.food_rating
+        //holder.ratingBar.cv_rating_bar.
 
         with(holder.mView) {
             tag = item

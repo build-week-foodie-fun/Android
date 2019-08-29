@@ -11,7 +11,17 @@ import android.widget.LinearLayout.VERTICAL
 import android.widget.RatingBar
 import android.widget.TextView
 
-class RatingCustomView(context: Context, attrs: AttributeSet): LinearLayout(context, attrs) {
+class RatingCustomView: LinearLayout {
+
+    constructor(context: Context): super(context)
+    constructor(context: Context, attrs: AttributeSet): super(context, attrs)
+    constructor(context: Context, attrs: AttributeSet, defStyleAttr: Int): super(context, attrs, defStyleAttr)
+    constructor(context: Context, attrs: AttributeSet, defStyleAttr: Int, defStyleRes: Int): super(context, attrs, defStyleAttr, defStyleRes)
+
+    companion object {
+        private const val DEFAULT_RATING = 1f
+    }
+
     init {
         orientation = VERTICAL
         val contextThemeWrapper = ContextThemeWrapper(context, R.style.FoodRatingBar)
@@ -32,6 +42,12 @@ class RatingCustomView(context: Context, attrs: AttributeSet): LinearLayout(cont
 
 
 
+    }
+    private fun setupAttributes(attrs: AttributeSet?) {
+        val typedArray = context.theme.obtainStyledAttributes(R.styleable.RatingCustomView)
+        val rating = typedArray.getFloat(R.styleable.RatingCustomView_rating, DEFAULT_RATING)
+
+        typedArray.recycle()
     }
 
 

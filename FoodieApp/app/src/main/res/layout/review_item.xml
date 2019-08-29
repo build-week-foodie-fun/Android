@@ -32,7 +32,7 @@
             android:layout_gravity="center_horizontal"
             android:textSize="16sp"/>
    <com.versilistyson.foodieapp.RatingCustomView
-           android:id="@+id/cv_ratingbar"
+           android:id="@+id/cv_rating_bar"
            android:layout_gravity="center"
            android:layout_width="wrap_content"
            android:layout_height="wrap_content">
