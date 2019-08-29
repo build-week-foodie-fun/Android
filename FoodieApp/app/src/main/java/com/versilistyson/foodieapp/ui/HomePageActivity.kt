@@ -12,6 +12,9 @@ import kotlinx.android.synthetic.main.activity_homepage.*
 
 class HomePageActivity : AppCompatActivity(), ReviewListFragment.OnListFragmentInteractionListener  {
 
+    companion object {
+        const val REQUEST_REVIEW = 0
+    }
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_homepage)
@@ -21,7 +24,14 @@ class HomePageActivity : AppCompatActivity(), ReviewListFragment.OnListFragmentI
             startActivity(createNewEntryIntent)
         }
     }
-    
+
+    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
+        super.onActivityResult(requestCode, resultCode, data)
+        if (requestCode == REQUEST_REVIEW && resultCode == RESULT_OK) {
+
+        }
+    }
+
     override fun onListFragmentInteraction(item: FoodEntry?) {
 
     }
