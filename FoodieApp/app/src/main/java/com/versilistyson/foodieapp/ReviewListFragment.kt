@@ -9,6 +9,7 @@ import androidx.recyclerview.widget.RecyclerView
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import kotlinx.android.synthetic.main.fragment_homepage_image_list.view.*
 
 /**
  * A fragment representing a list of Items.
@@ -18,35 +19,29 @@ import android.view.ViewGroup
 class ReviewListFragment : Fragment() {
 
     // TODO: Customize parameters
-    private var columnCount = 1
+    private var columnCount = 2
 
     private var listener: OnListFragmentInteractionListener? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        arguments?.let {
-            columnCount = it.getInt(ARG_COLUMN_COUNT)
+        retainInstance = true
         }
     }
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
-        val view = inflater.inflate(R.layout.fragment_homepage_image_list, container, false)
+    ): View? = inflater.inflate(R.layout.fragment_homepage_image_list, container, false)
 
-        // Set the adapter
-        if (view is RecyclerView) {
-            with(view) {
-                layoutManager = when {
-                    columnCount <= 1 -> LinearLayoutManager(context)
-                    else -> GridLayoutManager(context, columnCount)
-                }
-                adapter = MyReviewRecyclerViewAdapter(CreateNewEntryActivity.foodEntries, listener)
-            }
+    //Populate views after the layout has been inflated
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        view.list_recycler_view.apply {
+            layoutManager = GridLayoutManager(context, 2)
+            adapter = MyReviewRecyclerViewAdapter()
         }
-        return view
     }
 
     override fun onAttach(context: Context) {
