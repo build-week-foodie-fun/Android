@@ -11,20 +11,18 @@
             android:supportsRtl="true"
             android:theme="@style/AppTheme"
             tools:ignore="GoogleAppIndexingWarning">
+
         <activity android:name=".AppLauncherActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
-
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
         <activity
-                android:name="ui.HomePageActivity"
-                android:theme="@style/HomePageTheme">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN"/>
-            </intent-filter>
-        </activity>
+                android:name="com.versilistyson.foodieapp.ui.HomePageActivity"
+                android:theme="@style/HomePageTheme"/>
+        <activity
+                android:name=".CreateNewEntryActivity"/>
     </application>
 
 </manifest>
