@@ -21,7 +21,7 @@ import kotlinx.android.synthetic.main.fragment_homepage_image_list.view.list_rec
 class ReviewListFragment : Fragment() {
 
     // TODO: Customize parameters
-    private var columnCount = 2
+    private var columnCount = 1
 
     private var listener: OnListFragmentInteractionListener? = null
 
