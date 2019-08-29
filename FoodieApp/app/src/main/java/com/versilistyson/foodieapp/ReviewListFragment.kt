@@ -27,6 +27,8 @@ class ReviewListFragment : Fragment() {
         super.onCreate(savedInstanceState)
 
         retainInstance = true
+        arguments?.let {
+            // columnCount = it.getInt(ARG_COLUMN_COUNT)
         }
     }
 
