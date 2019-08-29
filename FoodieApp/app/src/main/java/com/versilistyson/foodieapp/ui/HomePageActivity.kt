@@ -5,14 +5,12 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.versilistyson.foodieapp.CreateNewEntryActivity
+import com.versilistyson.foodieapp.FoodEntry
 import com.versilistyson.foodieapp.R
 import com.versilistyson.foodieapp.ReviewListFragment
 import kotlinx.android.synthetic.main.activity_homepage.*
 
 class HomePageActivity : AppCompatActivity(), ReviewListFragment.OnListFragmentInteractionListener  {
-    override fun onListFragmentInteraction(item: DummyItem?) {
-        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
-    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -24,10 +22,7 @@ class HomePageActivity : AppCompatActivity(), ReviewListFragment.OnListFragmentI
         }
     }
 
-    /*override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
-        if (requestCode == imageRequestCode && resultCode == Activity.RESULT_OK) {
-            //TODO: Open up activity or fragment for adding in data
-        }
-        super.onActivityResult(requestCode, resultCode, data)
-    }*/
+    override fun onListFragmentInteraction(item: FoodEntry?) {
+
+    }
 }

@@ -10,8 +10,6 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 
-import com.versilistyson.foodieapp.dummy.DummyContent.DummyItem
-
 /**
  * A fragment representing a list of Items.
  * Activities containing this fragment MUST implement the
@@ -45,7 +43,7 @@ class ReviewListFragment : Fragment() {
                     columnCount <= 1 -> LinearLayoutManager(context)
                     else -> GridLayoutManager(context, columnCount)
                 }
-                adapter = MyReviewRecyclerViewAdapter(DummyContent.ITEMS, listener)
+                adapter = MyReviewRecyclerViewAdapter(CreateNewEntryActivity.foodEntries, listener)
             }
         }
         return view
@@ -78,7 +76,7 @@ class ReviewListFragment : Fragment() {
      */
     interface OnListFragmentInteractionListener {
         // TODO: Update argument type and name
-        fun onListFragmentInteraction(item: DummyItem?)
+        fun onListFragmentInteraction(item: FoodEntry?)
     }
 
     companion object {

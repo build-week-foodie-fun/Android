@@ -19,7 +19,7 @@
             </intent-filter>
         </activity>
         <activity
-                android:name="ui.HomePageActivity"
+                android:name="com.versilistyson.foodieapp.ui.HomePageActivity"
                 android:theme="@style/HomePageTheme">
         </activity>
         <activity android:name=".ui.RegisterActivity"/>

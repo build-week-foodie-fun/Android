@@ -15,7 +15,7 @@ class RegisterActivity : AppCompatActivity() {
 
         btn_submit.setOnClickListener {
             var registrationIntent = Intent(this, AppLauncherActivity::class.java)
-            startActivityForResult(registrationIntent, AppLauncherActivity.REQUEST_LOGIN)
+            startActivity(registrationIntent)
         }
     }
 }
