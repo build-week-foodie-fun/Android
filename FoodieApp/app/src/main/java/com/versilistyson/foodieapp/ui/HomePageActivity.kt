@@ -24,7 +24,7 @@ class HomePageActivity : AppCompatActivity(), ReviewListFragment.OnListFragmentI
             startActivity(createNewEntryIntent)
         }
     }
-
+    //
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         super.onActivityResult(requestCode, resultCode, data)
         if (requestCode == REQUEST_REVIEW && resultCode == RESULT_OK) {
