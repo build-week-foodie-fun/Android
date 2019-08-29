@@ -6,6 +6,7 @@ import java.io.Serializable
 class FoodEntry(id:Int,restaurant_name:String,restaurant_type:String,item_name:
 String,photoUri:Uri?,food_rating:Float,comments:String,price:String,date_of_visit:String):Serializable{
 
+
     val id=id
     var restaurant_name=restaurant_name
     var restaurant_type=restaurant_type
@@ -16,4 +17,8 @@ String,photoUri:Uri?,food_rating:Float,comments:String,price:String,date_of_visi
     var price=price
     var date_of_visit=date_of_visit
 
+}
+
+object FoodEntryList {
+    var foodEntries= mutableListOf<FoodEntry>()
 }

@@ -11,9 +11,14 @@ class CreateNewEntryActivity : AppCompatActivity() {
     var photoUri:Uri?=null
 
     companion object {
-
-       var foodEntries= mutableListOf<FoodEntry>()
         internal const val REQUEST_IMAGE_GET = 1
+        const val REVIEW_IMAGE = "REVIEW_IMAGE"
+        const val DATE = "DATE"
+        const val PRICE = "PRICE"
+        const val RATING = "RATING"
+        const val RESTAURANT = "RESTAURANT"
+        const val RESTAURANT_TYPE = "RESTAURANT_TYPE"
+        const val COMMENTS = "COMMENTS"
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -30,9 +35,16 @@ class CreateNewEntryActivity : AppCompatActivity() {
 
         btn_submit_entry.setOnClickListener {
 
-           foodEntries.add(FoodEntry(foodEntries.size-1,et_restaurant.toString(),et_restaurant_type.toString(),
-                    et_food_item.toString(),photoUri, new_entry_rating_bar.rating,et_comments.toString(),et_price.toString(),et_date.toString()))
+            val foodEntry = FoodEntry(
+                FoodEntryList.foodEntries.size -1,
+                et_restaurant.text.toString(),
+                et_restaurant_type.text.toString(),
+                et_food_item.text.toString(),
+                photoUri,
+                new_entry_rating_bar.rating,et_comments.text.toString(),
+                et_price.text.toString(),et_date.text.toString())
 
+            FoodEntryList.foodEntries.add(foodEntry)
 
             val intent = Intent(this, HomePageActivity::class.java)
             startActivity(intent)

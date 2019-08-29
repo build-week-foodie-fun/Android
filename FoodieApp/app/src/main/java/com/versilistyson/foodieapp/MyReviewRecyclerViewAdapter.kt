@@ -35,7 +35,7 @@ class MyReviewRecyclerViewAdapter(
     inner class ViewHolder(val mView: View) : RecyclerView.ViewHolder(mView) {
         val foodImage: ImageView = mView.cv_image_view
         val foodDetail: TextView = mView.cv_textview
-        val ratingBar: RatingBar = mView.cv_rating_bar
+        val ratingBar: RatingCustomView = mView.cv_rating_bar
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
@@ -48,7 +48,8 @@ class MyReviewRecyclerViewAdapter(
         val item = mValues[position]
         holder.foodImage.setImageURI(item.photoUri)
         holder.foodDetail.text = item.item_name
-        holder.ratingBar.rating = item.food_rating
+        //TODO: Add attributes to RatingCustomView so we can pass the food rating to the recycler
+        //holder.ratingBar = item.food_rating
 
         with(holder.mView) {
             tag = item
