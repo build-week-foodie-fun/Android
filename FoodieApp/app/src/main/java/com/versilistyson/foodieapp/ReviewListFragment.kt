@@ -40,7 +40,7 @@ class ReviewListFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         view.list_recycler_view.apply {
             layoutManager = GridLayoutManager(context, 2)
-            adapter = MyReviewRecyclerViewAdapter()
+            adapter = MyReviewRecyclerViewAdapter(CreateNewEntryActivity.foodEntries, listener)
         }
     }
 
