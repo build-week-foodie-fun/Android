@@ -23,6 +23,11 @@ class HomePageActivity : AppCompatActivity(), ReviewListFragment.OnListFragmentI
             var createNewEntryIntent = Intent(this, CreateNewEntryActivity::class.java)
             startActivity(createNewEntryIntent)
         }
+
+        user_icon.setOnClickListener {
+            var editUserIntent = Intent(this, ProfileActivity::class.java)
+            startActivity(editUserIntent)
+        }
     }
     //
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
