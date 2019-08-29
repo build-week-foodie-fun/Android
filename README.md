@@ -4,7 +4,7 @@ Foodie App allows users to document information about the food they have eaten. 
 
 Foodie App was created by a three person Android team within four days. 
 
-The user is able to sign in. If the user does not have an account, they can click on the Register button.
+The user is able to sign in. If the user does not have an account, they can click on the "Register" button.
 
 <img src="applauncher.png" alt="applauncher" width="360px">
 
