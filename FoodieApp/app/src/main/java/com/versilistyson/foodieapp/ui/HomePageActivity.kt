@@ -30,12 +30,6 @@ class HomePageActivity : AppCompatActivity(), ReviewListFragment.OnListFragmentI
         }
     }
     //
-    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
-        super.onActivityResult(requestCode, resultCode, data)
-        if (requestCode == REQUEST_REVIEW && resultCode == RESULT_OK) {
-
-        }
-    }
 
     override fun onListFragmentInteraction(item: FoodEntry?) {
 
