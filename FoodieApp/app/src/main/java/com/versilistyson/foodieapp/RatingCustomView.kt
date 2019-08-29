@@ -10,7 +10,6 @@ import android.widget.LinearLayout
 import android.widget.LinearLayout.VERTICAL
 import android.widget.RatingBar
 import android.widget.TextView
-import kotlinx.android.synthetic.main.custom_rating_bar_layout.view.*
 
 class RatingCustomView(context: Context, attrs: AttributeSet): LinearLayout(context, attrs) {
     init {

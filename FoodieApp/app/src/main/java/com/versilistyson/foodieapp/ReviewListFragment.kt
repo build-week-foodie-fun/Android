@@ -9,7 +9,9 @@ import androidx.recyclerview.widget.RecyclerView
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import kotlinx.android.synthetic.main.fragment_homepage_image_list.*
 import kotlinx.android.synthetic.main.fragment_homepage_image_list.view.*
+import kotlinx.android.synthetic.main.fragment_homepage_image_list.view.list_recycler_view
 
 /**
  * A fragment representing a list of Items.
@@ -40,7 +42,7 @@ class ReviewListFragment : Fragment() {
     //Populate views after the layout has been inflated
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        view.list_recycler_view.apply {
+        list_recycler_view.apply {
             layoutManager = GridLayoutManager(context, 2)
             adapter = MyReviewRecyclerViewAdapter(CreateNewEntryActivity.foodEntries, listener)
         }

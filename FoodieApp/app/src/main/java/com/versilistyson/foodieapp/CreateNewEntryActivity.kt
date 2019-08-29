@@ -31,7 +31,7 @@ class CreateNewEntryActivity : AppCompatActivity() {
         btn_submit_entry.setOnClickListener {
 
            foodEntries.add(FoodEntry(foodEntries.size-1,et_restaurant.toString(),et_restaurant_type.toString(),
-                    et_food_item.toString(),photoUri, Integer.parseInt(et_rating.toString()),et_comments.toString(),et_price.toString(),et_date.toString()))
+                    et_food_item.toString(),photoUri, et_rating.toString().toFloat(),et_comments.toString(),et_price.toString(),et_date.toString()))
 
 
             val intent = Intent(this, HomePageActivity::class.java)
