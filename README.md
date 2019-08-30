@@ -20,7 +20,7 @@ From the Homepage, the user can click on their profile to update their informati
 
 <img src="updatedprofile.png" alt="profile" width="360px">
 
-If the user clicks on the "+" it will add a new food entry. The New Entry will open. 
+If the user clicks on the "+" button on the Homepage, it will add a new food entry. The New Entry will open. 
 
 <img src="updatednewfoodentry.png" alt="newfoodentry" width="360px">
 
