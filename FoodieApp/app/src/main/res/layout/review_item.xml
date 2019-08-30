@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.cardview.widget.CardView
-        android:background="@color/colorWhite"
+<com.google.android.material.card.MaterialCardView
+        app:cardBackgroundColor="@color/colorWhite"
         android:id="@+id/cv"
         android:elevation="10dp"
         app:cardCornerRadius="4dp"
@@ -23,6 +23,7 @@
     />
 
     <TextView
+            android:textColor="@android:color/black"
             android:fontFamily="@font/montserrat_lightitalic"
             android:textAlignment="center"
             android:id="@+id/cv_textview"
@@ -32,12 +33,15 @@
             android:layout_height="50dp"
             android:layout_gravity="center_horizontal"
             android:textSize="16sp"/>
-   <com.versilistyson.foodieapp.views.RatingCustomView
-           android:id="@+id/cv_rating_bar"
-           android:layout_gravity="center"
-           android:layout_width="wrap_content"
-           android:layout_height="wrap_content">
-
-   </com.versilistyson.foodieapp.views.RatingCustomView>
+    <RatingBar
+            android:layout_marginBottom="4dp"
+            android:rating="1"
+            style="@style/FoodRatingBar"
+            android:numStars="3"
+            android:id="@+id/cv_rating_bar"
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+    </RatingBar>
  </LinearLayout>
-</androidx.cardview.widget.CardView>
+</com.google.android.material.card.MaterialCardView>
