@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.cardview.widget.CardView
-        android:background="@color/colorWhite"
+        app:cardBackgroundColor="@color/colorWhite"
         android:id="@+id/cv"
         android:elevation="10dp"
         app:cardCornerRadius="4dp"
