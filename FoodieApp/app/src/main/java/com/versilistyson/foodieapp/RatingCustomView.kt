@@ -1,6 +1,7 @@
 package com.versilistyson.foodieapp
 
 import android.content.Context
+import android.content.res.TypedArray
 import android.text.Layout
 import android.util.AttributeSet
 import android.view.ContextThemeWrapper
@@ -23,11 +24,12 @@ class RatingCustomView: LinearLayout {
     }
 
     init {
+
         orientation = VERTICAL
         val contextThemeWrapper = ContextThemeWrapper(context, R.style.FoodRatingBar)
         val ratingBar = RatingBar(contextThemeWrapper)
         ratingBar.numStars = 3
-        ratingBar.rating = 1f
+        ratingBar.rating = 3f
         ratingBar.stepSize = 1f
         ratingBar.isIndicator
         val textView = TextView(context)
@@ -39,16 +41,5 @@ class RatingCustomView: LinearLayout {
             ratingBar.numStars == 2 -> "Tasty!"
             else -> "Superb!"
         }
-
-
-
     }
-    private fun setupAttributes(attrs: AttributeSet?) {
-        val typedArray = context.theme.obtainStyledAttributes(R.styleable.RatingCustomView)
-        val rating = typedArray.getFloat(R.styleable.RatingCustomView_rating, DEFAULT_RATING)
-
-        typedArray.recycle()
-    }
-
-
 }
