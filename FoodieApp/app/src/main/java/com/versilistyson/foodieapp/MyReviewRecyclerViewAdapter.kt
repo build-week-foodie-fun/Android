@@ -48,8 +48,7 @@ class MyReviewRecyclerViewAdapter(
         val item = mValues[position]
         holder.foodImage.setImageURI(item.photoUri)
         holder.foodDetail.text = item.item_name
-        //TODO: Add attributes to RatingCustomView so we can pass the food rating to the recycler
-
+        holder.ratingBar.ratingBar.rating = item.food_rating
         with(holder.mView) {
             tag = item
             setOnClickListener(mOnClickListener)
