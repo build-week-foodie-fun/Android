@@ -11,7 +11,7 @@ String,photoUri:Uri?,food_rating:Float,comments:String,price:String,date_of_visi
     var restaurant_name=restaurant_name
     var restaurant_type=restaurant_type
     var item_name=item_name
-    val photoUri=photoUri
+    var photoUri=photoUri
     var food_rating = food_rating
     var comments=comments
     var price=price
