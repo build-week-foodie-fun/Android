@@ -1,4 +1,4 @@
-package com.versilistyson.foodieapp
+package com.versilistyson.foodieapp.model
 
 import android.net.Uri
 import java.io.Serializable

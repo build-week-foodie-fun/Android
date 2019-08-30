@@ -1,4 +1,4 @@
-package com.versilistyson.foodieapp
+package com.versilistyson.foodieapp.utils
 
 import android.graphics.Rect
 import android.view.View

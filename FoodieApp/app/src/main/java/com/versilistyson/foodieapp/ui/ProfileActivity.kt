@@ -3,10 +3,8 @@ package com.versilistyson.foodieapp.ui
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import com.versilistyson.foodieapp.FoodEntryList
 import com.versilistyson.foodieapp.R
 import com.versilistyson.foodieapp.model.UserProfileList
-import kotlinx.android.synthetic.main.activity_details.*
 import kotlinx.android.synthetic.main.activity_profile.*
 
 class ProfileActivity : AppCompatActivity() {

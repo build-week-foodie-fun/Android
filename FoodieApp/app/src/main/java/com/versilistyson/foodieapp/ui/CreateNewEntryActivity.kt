@@ -1,4 +1,4 @@
-package com.versilistyson.foodieapp
+package com.versilistyson.foodieapp.ui
 import android.app.DatePickerDialog
 import android.content.Intent
 import android.icu.util.Calendar
@@ -6,7 +6,9 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import kotlinx.android.synthetic.main.activity_create_new_entry.*
 import android.net.Uri
-import com.versilistyson.foodieapp.ui.HomePageActivity
+import com.versilistyson.foodieapp.R
+import com.versilistyson.foodieapp.model.FoodEntry
+import com.versilistyson.foodieapp.model.FoodEntryList
 
 class CreateNewEntryActivity : AppCompatActivity() {
 
@@ -43,14 +45,16 @@ class CreateNewEntryActivity : AppCompatActivity() {
             val intent = Intent(Intent.ACTION_GET_CONTENT)
             intent.type = "image/*"
             if (intent.resolveActivity(packageManager) != null) {
-                startActivityForResult(intent, REQUEST_IMAGE_GET)
+                startActivityForResult(intent,
+                    REQUEST_IMAGE_GET
+                )
             }
         }
 
         btn_submit_entry.setOnClickListener {
 
             val foodEntry = FoodEntry(
-                FoodEntryList.foodEntries.size -1,
+                FoodEntryList.foodEntries.size - 1,
                 et_restaurant.text.toString(),
                 et_restaurant_type.text.toString(),
                 et_food_item.text.toString(),
@@ -58,7 +62,8 @@ class CreateNewEntryActivity : AppCompatActivity() {
                 new_entry_rating_bar.rating,
                 et_comments.text.toString(),
                 et_price.text.toString(),
-                et_date.text.toString())
+                et_date.text.toString()
+            )
 
             FoodEntryList.foodEntries.add(foodEntry)
 

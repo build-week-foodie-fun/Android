@@ -1,16 +1,12 @@
-package com.versilistyson.foodieapp
+package com.versilistyson.foodieapp.views
 
 import android.content.Context
-import android.content.res.TypedArray
-import android.text.Layout
 import android.util.AttributeSet
-import android.view.ContextThemeWrapper
-import android.view.LayoutInflater
 import android.view.View
 import android.widget.LinearLayout
-import android.widget.LinearLayout.VERTICAL
 import android.widget.RatingBar
 import android.widget.TextView
+import com.versilistyson.foodieapp.R
 
 class RatingCustomView(context: Context, attrs: AttributeSet): LinearLayout(context, attrs) {
 

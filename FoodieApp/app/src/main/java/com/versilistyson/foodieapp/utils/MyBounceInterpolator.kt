@@ -1,4 +1,4 @@
-package com.versilistyson.foodieapp
+package com.versilistyson.foodieapp.utils
 
 class MyBounceInterpolator: android.view.animation.Interpolator{
 

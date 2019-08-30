@@ -3,7 +3,6 @@ package com.versilistyson.foodieapp.ui
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import com.versilistyson.foodieapp.AppLauncherActivity
 import com.versilistyson.foodieapp.R
 import com.versilistyson.foodieapp.model.UserProfile
 import com.versilistyson.foodieapp.model.UserProfileList

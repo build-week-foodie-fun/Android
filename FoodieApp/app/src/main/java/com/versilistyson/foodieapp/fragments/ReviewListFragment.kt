@@ -1,16 +1,16 @@
-package com.versilistyson.foodieapp
+package com.versilistyson.foodieapp.fragments
 
 import android.content.Context
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.GridLayoutManager
-import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.recyclerview.widget.RecyclerView
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import kotlinx.android.synthetic.main.fragment_homepage_image_list.*
-import kotlinx.android.synthetic.main.fragment_homepage_image_list.view.*
+import com.versilistyson.foodieapp.adapters.MyReviewRecyclerViewAdapter
+import com.versilistyson.foodieapp.R
+import com.versilistyson.foodieapp.model.FoodEntry
+import com.versilistyson.foodieapp.model.FoodEntryList
 import kotlinx.android.synthetic.main.fragment_homepage_image_list.view.list_recycler_view
 
 /**
@@ -44,7 +44,8 @@ class ReviewListFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         view.list_recycler_view.apply {
             layoutManager = GridLayoutManager(context, 2)
-            adapter = MyReviewRecyclerViewAdapter(FoodEntryList.foodEntries, listener)
+            adapter =
+                MyReviewRecyclerViewAdapter(FoodEntryList.foodEntries, listener)
         }
     }
 

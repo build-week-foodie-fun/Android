@@ -32,12 +32,12 @@
             android:layout_height="50dp"
             android:layout_gravity="center_horizontal"
             android:textSize="16sp"/>
-   <com.versilistyson.foodieapp.RatingCustomView
+   <com.versilistyson.foodieapp.views.RatingCustomView
            android:id="@+id/cv_rating_bar"
            android:layout_gravity="center"
            android:layout_width="wrap_content"
            android:layout_height="wrap_content">
 
-   </com.versilistyson.foodieapp.RatingCustomView>
+   </com.versilistyson.foodieapp.views.RatingCustomView>
  </LinearLayout>
 </androidx.cardview.widget.CardView>

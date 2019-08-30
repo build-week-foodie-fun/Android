@@ -10,5 +10,5 @@
         android:layout_height="match_parent"
         android:layout_marginLeft="16dp"
         android:layout_marginRight="16dp"
-        tools:context=".ReviewListFragment"
+        tools:context=".fragments.ReviewListFragment"
         tools:listitem="@layout/review_item"/>

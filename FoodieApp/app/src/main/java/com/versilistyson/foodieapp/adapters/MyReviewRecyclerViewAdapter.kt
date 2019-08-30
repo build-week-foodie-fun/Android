@@ -1,15 +1,17 @@
-package com.versilistyson.foodieapp
+package com.versilistyson.foodieapp.adapters
 
 import androidx.recyclerview.widget.RecyclerView
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
-import android.widget.RatingBar
 import android.widget.TextView
+import com.versilistyson.foodieapp.R
 
 
-import com.versilistyson.foodieapp.ReviewListFragment.OnListFragmentInteractionListener
+import com.versilistyson.foodieapp.fragments.ReviewListFragment.OnListFragmentInteractionListener
+import com.versilistyson.foodieapp.model.FoodEntry
+import com.versilistyson.foodieapp.views.RatingCustomView
 import kotlinx.android.synthetic.main.review_item.view.*
 
 /**
