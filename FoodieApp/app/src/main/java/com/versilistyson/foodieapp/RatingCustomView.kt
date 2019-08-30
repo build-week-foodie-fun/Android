@@ -36,6 +36,7 @@ class RatingCustomView(context: Context, attrs: AttributeSet): LinearLayout(cont
 
 
         val textView = TextView(context)
+        textView.setTextColor(-0x1000000)
         textView.textAlignment = View.TEXT_ALIGNMENT_CENTER
         textView.textSize = 16f
         textView.text = when {
