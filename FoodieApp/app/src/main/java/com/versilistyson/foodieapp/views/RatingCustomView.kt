@@ -19,10 +19,9 @@ class RatingCustomView(context: Context, attrs: AttributeSet): LinearLayout(cont
 
         orientation = VERTICAL
 
-        ratingBar = RatingBar(context,attrs, R.style.FoodRatingBar)
+        ratingBar = RatingBar(context)
         ratingBar.numStars = 3
         ratingBar.stepSize = 1f
-        ratingBar.isIndicator
 
         val attributes = context.obtainStyledAttributes(R.styleable.RatingCustomView)
         ratingBar.rating = attributes.getFloat(R.styleable.RatingCustomView_rating, 1f)
@@ -32,6 +31,7 @@ class RatingCustomView(context: Context, attrs: AttributeSet): LinearLayout(cont
 
 
         val textView = TextView(context)
+        textView.setTextColor(-0x1000000)
         textView.textAlignment = View.TEXT_ALIGNMENT_CENTER
         textView.textSize = 16f
         textView.text = when {

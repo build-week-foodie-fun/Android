@@ -5,6 +5,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
+import android.widget.RatingBar
 import android.widget.TextView
 import com.versilistyson.foodieapp.R
 
@@ -37,7 +38,7 @@ class MyReviewRecyclerViewAdapter(
     inner class ViewHolder(val mView: View) : RecyclerView.ViewHolder(mView) {
         val foodImage: ImageView = mView.cv_image_view
         val foodDetail: TextView = mView.cv_textview
-        val ratingBar: RatingCustomView = mView.cv_rating_bar
+        val ratingBar: RatingBar = mView.cv_rating_bar
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
@@ -50,7 +51,7 @@ class MyReviewRecyclerViewAdapter(
         val item = mValues[position]
         holder.foodImage.setImageURI(item.photoUri)
         holder.foodDetail.text = item.item_name
-        holder.ratingBar.ratingBar.rating = item.food_rating
+        holder.ratingBar.rating = item.food_rating
         with(holder.mView) {
             tag = item
             setOnClickListener(mOnClickListener)
