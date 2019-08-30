@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RatingBar
+        android:layout_marginBottom="4dp"
+        android:rating="1"
+        style="@style/FoodRatingBar"
+        android:numStars="3"
+        android:id="@+id/rating"
+        android:layout_gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        xmlns:android="http://schemas.android.com/apk/res/android">
+</RatingBar>

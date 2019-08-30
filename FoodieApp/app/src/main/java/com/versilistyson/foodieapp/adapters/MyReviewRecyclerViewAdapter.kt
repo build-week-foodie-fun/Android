@@ -13,6 +13,7 @@ import com.versilistyson.foodieapp.R
 import com.versilistyson.foodieapp.fragments.ReviewListFragment.OnListFragmentInteractionListener
 import com.versilistyson.foodieapp.model.FoodEntry
 import com.versilistyson.foodieapp.views.RatingCustomView
+import kotlinx.android.synthetic.main.rating_bar.view.*
 import kotlinx.android.synthetic.main.review_item.view.*
 
 /**
@@ -38,7 +39,7 @@ class MyReviewRecyclerViewAdapter(
     inner class ViewHolder(val mView: View) : RecyclerView.ViewHolder(mView) {
         val foodImage: ImageView = mView.cv_image_view
         val foodDetail: TextView = mView.cv_textview
-        val ratingBar: RatingBar = mView.cv_rating_bar
+        val ratingCustomView: RatingCustomView = mView.cv_rating_bar
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
@@ -51,7 +52,8 @@ class MyReviewRecyclerViewAdapter(
         val item = mValues[position]
         holder.foodImage.setImageURI(item.photoUri)
         holder.foodDetail.text = item.item_name
-        holder.ratingBar.rating = item.food_rating
+        holder.ratingCustomView.ratingBar.rating = item.food_rating
+        holder.ratingCustomView.changeRating(item.food_rating)
         with(holder.mView) {
             tag = item
             setOnClickListener(mOnClickListener)
