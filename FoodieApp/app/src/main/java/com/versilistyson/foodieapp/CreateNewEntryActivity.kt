@@ -55,8 +55,10 @@ class CreateNewEntryActivity : AppCompatActivity() {
                 et_restaurant_type.text.toString(),
                 et_food_item.text.toString(),
                 photoUri,
-                new_entry_rating_bar.rating,et_comments.text.toString(),
-                et_price.text.toString(),et_date.text.toString())
+                new_entry_rating_bar.rating,
+                et_comments.text.toString(),
+                et_price.text.toString(),
+                et_date.text.toString())
 
             FoodEntryList.foodEntries.add(foodEntry)
 

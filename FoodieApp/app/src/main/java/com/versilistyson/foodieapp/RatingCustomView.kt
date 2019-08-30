@@ -1,6 +1,7 @@
 package com.versilistyson.foodieapp
 
 import android.content.Context
+import android.content.res.TypedArray
 import android.text.Layout
 import android.util.AttributeSet
 import android.view.ContextThemeWrapper
@@ -11,15 +12,27 @@ import android.widget.LinearLayout.VERTICAL
 import android.widget.RatingBar
 import android.widget.TextView
 
-class RatingCustomView(context: Context, attrs: AttributeSet): LinearLayout(context, attrs) {
+class RatingCustomView: LinearLayout {
+
+    constructor(context: Context): super(context)
+    constructor(context: Context, attrs: AttributeSet): super(context, attrs)
+    constructor(context: Context, attrs: AttributeSet, defStyleAttr: Int): super(context, attrs, defStyleAttr)
+    constructor(context: Context, attrs: AttributeSet, defStyleAttr: Int, defStyleRes: Int): super(context, attrs, defStyleAttr, defStyleRes)
+
+    companion object {
+        private const val DEFAULT_RATING = 1f
+    }
+
     init {
+
         orientation = VERTICAL
-        val ratingBar = RatingBar(ContextThemeWrapper(context, R.style.FoodRatingBar))
+        val contextThemeWrapper = ContextThemeWrapper(context, R.style.FoodRatingBar)
+        val ratingBar = RatingBar(contextThemeWrapper)
         ratingBar.numStars = 3
-        ratingBar.rating = 1f
+        ratingBar.rating = 3f
         ratingBar.stepSize = 1f
         ratingBar.isIndicator
-        val textView = TextView(context) as TextView
+        val textView = TextView(context)
         textView.textAlignment = View.TEXT_ALIGNMENT_CENTER
         textView.textSize = 16f
         textView.text = when {
@@ -28,10 +41,5 @@ class RatingCustomView(context: Context, attrs: AttributeSet): LinearLayout(cont
             ratingBar.numStars == 2 -> "Tasty!"
             else -> "Superb!"
         }
-
-
-
     }
-
-
 }
