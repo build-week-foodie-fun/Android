@@ -7,7 +7,7 @@
         android:orientation="vertical"
         android:background="@color/colorWhite"
         tools:context=".ui.ProfileActivity">
-
+//
     <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_gravity="center"
             android:layout_width="match_parent"
