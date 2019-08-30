@@ -54,7 +54,7 @@ class CreateNewEntryActivity : AppCompatActivity() {
         btn_submit_entry.setOnClickListener {
 
             val foodEntry = FoodEntry(
-                FoodEntryList.foodEntries.size - 1,
+                FoodEntryList.foodEntries.size,
                 et_restaurant.text.toString(),
                 et_restaurant_type.text.toString(),
                 et_food_item.text.toString(),

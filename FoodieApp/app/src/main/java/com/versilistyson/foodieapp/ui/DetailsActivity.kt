@@ -22,32 +22,38 @@ class DetailsActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_details)
-        val id = intent.getIntExtra("FOOD_ENTRY",1)
-        det_restaurant.setText(foodEntries[id-1].restaurant_name)
-        det_restaurant_type.setText(foodEntries[id-1].restaurant_type)
-        det_food_item.setText(foodEntries[id-1].item_name)
-        det_date.setText(foodEntries[id-1].date_of_visit)
-        det_price.setText(foodEntries[id-1].price)
-        det_rating.rating=foodEntries[id-1].food_rating
-        det_comments.setText(foodEntries[id-1].comments)
-        dim_upload_image.setImageURI(foodEntries[id-1].photoUri)
+       val id = intent.getIntExtra("FOOD_ENTRY_ID",1)
+        det_restaurant.setText(foodEntries[id].restaurant_name)
+       det_restaurant_type.setText(foodEntries[id].restaurant_type)
+        det_food_item.setText(foodEntries[id].item_name)
+        det_date.setText(foodEntries[id].date_of_visit)
+        det_price.setText(foodEntries[id].price)
+        det_rating.rating=foodEntries[id].food_rating
+        det_comments.setText(foodEntries[id].comments)
+        dim_upload_image.setImageURI(foodEntries[id].photoUri)
 
         dbtn_edit_entry.setOnClickListener {
-            foodEntries[id-1].restaurant_name=det_restaurant.text.toString()
-            foodEntries[id-1].restaurant_type=det_restaurant_type.text.toString()
-            foodEntries[id-1].item_name=det_food_item.text.toString()
-            foodEntries[id-1].date_of_visit=det_date.text.toString()
-            foodEntries[id-1].price=det_price.text.toString()
-            foodEntries[id-1].food_rating=det_rating.rating
-            foodEntries[id-1].comments=det_comments.text.toString()
-            if(photoUri!=null){foodEntries[id-1].photoUri=photoUri}
-            val intent = Intent(this, HomePageActivity::class.java)
-            startActivity(intent)
+           foodEntries[id].restaurant_name=det_restaurant.text.toString()
+            foodEntries[id].restaurant_type=det_restaurant_type.text.toString()
+             foodEntries[id].item_name=det_food_item.text.toString()
+             foodEntries[id].date_of_visit=det_date.text.toString()
+             foodEntries[id].price=det_price.text.toString()
+             foodEntries[id].food_rating=det_rating.rating
+             foodEntries[id].comments=det_comments.text.toString()
+             if(photoUri!=null){foodEntries[id].photoUri=photoUri}
+             val intent = Intent(this, HomePageActivity::class.java)
+             startActivity(intent)
         }
-        dbtn_okay.setOnClickListener {
+        dbtn_delete.setOnClickListener {
+
+            foodEntries.removeAt(id)
             val intent = Intent(this, HomePageActivity::class.java)
             startActivity(intent)
 
+        }
+        dbtn_back.setOnClickListener {
+            val intent = Intent(this, HomePageActivity::class.java)
+            startActivity(intent)
         }
         dbtn_upload_image.setOnClickListener {
             val intent = Intent(Intent.ACTION_GET_CONTENT)
