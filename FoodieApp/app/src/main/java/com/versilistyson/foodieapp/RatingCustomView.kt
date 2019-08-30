@@ -12,34 +12,41 @@ import android.widget.LinearLayout.VERTICAL
 import android.widget.RatingBar
 import android.widget.TextView
 
-class RatingCustomView: LinearLayout {
+class RatingCustomView(context: Context, attrs: AttributeSet): LinearLayout(context, attrs) {
 
-    constructor(context: Context): super(context)
-    constructor(context: Context, attrs: AttributeSet): super(context, attrs)
-    constructor(context: Context, attrs: AttributeSet, defStyleAttr: Int): super(context, attrs, defStyleAttr)
-    constructor(context: Context, attrs: AttributeSet, defStyleAttr: Int, defStyleRes: Int): super(context, attrs, defStyleAttr, defStyleRes)
 
-    companion object {
-        private const val DEFAULT_RATING = 1f
-    }
+
+
+    var ratingBar: RatingBar
 
     init {
 
         orientation = VERTICAL
-        val contextThemeWrapper = ContextThemeWrapper(context, R.style.FoodRatingBar)
-        val ratingBar = RatingBar(contextThemeWrapper)
+
+        ratingBar = RatingBar(context,attrs, R.style.FoodRatingBar)
         ratingBar.numStars = 3
-        ratingBar.rating = 3f
         ratingBar.stepSize = 1f
         ratingBar.isIndicator
+
+        val attributes = context.obtainStyledAttributes(R.styleable.RatingCustomView)
+        ratingBar.rating = attributes.getFloat(R.styleable.RatingCustomView_rating, 1f)
+        attributes.recycle()
+
+        addView(ratingBar)
+
+
         val textView = TextView(context)
         textView.textAlignment = View.TEXT_ALIGNMENT_CENTER
         textView.textSize = 16f
         textView.text = when {
-            ratingBar.numStars == 0 -> "Awful"
-            ratingBar.numStars == 1 -> "Meh..."
-            ratingBar.numStars == 2 -> "Tasty!"
+            ratingBar.rating == 0f -> "Awful"
+            ratingBar.rating == 1f -> "Meh..."
+            ratingBar.rating == 2f -> "Tasty!"
             else -> "Superb!"
         }
+        addView(textView)
+
+
     }
+
 }
