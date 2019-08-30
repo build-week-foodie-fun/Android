@@ -22,8 +22,12 @@ From the Homepage, the user can click on their profile to update their informati
 
 If the user clicks on the "+" it will add a new food entry. The New Entry will open. 
 
-<img src="newfoodentry.png" alt="newfoodentry" width="360px">
+<img src="updatednewfoodentry.png" alt="newfoodentry" width="360px">
 
 After the entry has been entered, it will populate onto the Homepage. 
 
 <img src="homepage.png" alt="homepage" width="360px">
+
+If need to make changes to an entry, click on the image/entry and the Food Entry Details will open.
+
+<img src="details.png" alt="details" width="360px">
