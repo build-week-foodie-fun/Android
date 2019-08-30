@@ -11,10 +11,10 @@
             android:supportsRtl="true"
             android:theme="@style/AppTheme"
             tools:ignore="GoogleAppIndexingWarning">
-        <activity android:name=".DetailsActivity">
+        <activity android:name=".ui.DetailsActivity">
         </activity>
         <activity android:name=".ui.ProfileActivity"/>
-        <activity android:name=".AppLauncherActivity">
+        <activity android:name=".ui.AppLauncherActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
 
@@ -25,7 +25,7 @@
                 android:name=".ui.HomePageActivity"
                 android:theme="@style/HomePageTheme"/>
         <activity android:name=".ui.RegisterActivity"/>
-        <activity android:name=".CreateNewEntryActivity"/>
+        <activity android:name=".ui.CreateNewEntryActivity"/>
     </application>
 
 </manifest>

@@ -1,4 +1,4 @@
-package com.versilistyson.foodieapp
+package com.versilistyson.foodieapp.ui
 
 import android.app.DatePickerDialog
 import android.content.Intent
@@ -6,9 +6,9 @@ import android.icu.util.Calendar
 import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import com.versilistyson.foodieapp.ui.HomePageActivity
+import com.versilistyson.foodieapp.R
 import kotlinx.android.synthetic.main.activity_details.*
-import com.versilistyson.foodieapp.FoodEntryList.foodEntries
+import com.versilistyson.foodieapp.model.FoodEntryList.foodEntries
 import kotlinx.android.synthetic.main.activity_create_new_entry.*
 
 
@@ -53,7 +53,9 @@ class DetailsActivity : AppCompatActivity() {
             val intent = Intent(Intent.ACTION_GET_CONTENT)
             intent.type = "image/*"
             if (intent.resolveActivity(packageManager) != null) {
-                startActivityForResult(intent, REQUEST_IMAGE_GET)
+                startActivityForResult(intent,
+                    REQUEST_IMAGE_GET
+                )
             }
         }
 

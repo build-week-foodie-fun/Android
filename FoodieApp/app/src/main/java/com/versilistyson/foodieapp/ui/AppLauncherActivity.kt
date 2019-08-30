@@ -1,10 +1,9 @@
-package com.versilistyson.foodieapp
+package com.versilistyson.foodieapp.ui
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import com.versilistyson.foodieapp.ui.HomePageActivity
-import com.versilistyson.foodieapp.ui.RegisterActivity
+import com.versilistyson.foodieapp.R
 import kotlinx.android.synthetic.main.activity_app_launcher.*
 
 class AppLauncherActivity : AppCompatActivity() {
