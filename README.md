@@ -1,8 +1,8 @@
 # Android
 
-Foodie App allows users to document information about the food they have eaten. Users are able to create new food entries with the following information: such as the name of the restaurant, the restaurant type, what they ordered, the date they ate there, the price, how they rate it, attach an image and make any other comments. Those created entries can then be accessed to update with either new information or deleted from the list. 
-
 Foodie App was created by a three person Android team within four days. 
+
+Foodie App allows users to document information about the food they have eaten. Users are able to create new food entries with the following information: such as the name of the restaurant, the restaurant type, what they ordered, the date they ate there, the price, how they rate it, attach an image and make any other comments. Those created entries can then be accessed to update with either new information or deleted from the list. 
 
 The user is able to sign in. If the user does not have an account, they can click on the "Register" button.
 
