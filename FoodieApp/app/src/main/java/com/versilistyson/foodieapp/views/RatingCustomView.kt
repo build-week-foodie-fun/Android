@@ -1,7 +1,9 @@
 package com.versilistyson.foodieapp.views
 
+import android.app.Activity
 import android.content.Context
 import android.util.AttributeSet
+import android.view.LayoutInflater
 import android.view.View
 import android.widget.LinearLayout
 import android.widget.RatingBar
@@ -12,37 +14,35 @@ class RatingCustomView(context: Context, attrs: AttributeSet): LinearLayout(cont
 
 
 
-
+    var textView: TextView
     var ratingBar: RatingBar
 
     init {
-
+        ratingBar = (context as Activity).layoutInflater.inflate(R.layout.rating_bar, null) as RatingBar
         orientation = VERTICAL
-
-        ratingBar = RatingBar(context)
         ratingBar.numStars = 3
         ratingBar.stepSize = 1f
-
-        val attributes = context.obtainStyledAttributes(R.styleable.RatingCustomView)
-        ratingBar.rating = attributes.getFloat(R.styleable.RatingCustomView_rating, 1f)
-        attributes.recycle()
-
         addView(ratingBar)
 
 
-        val textView = TextView(context)
+
+
+        textView = TextView(context)
         textView.setTextColor(-0x1000000)
         textView.textAlignment = View.TEXT_ALIGNMENT_CENTER
         textView.textSize = 16f
+
+        addView(textView)
+
+
+
+    }
+    fun changeRating(rating: Float) {
         textView.text = when {
             ratingBar.rating == 0f -> "Awful"
             ratingBar.rating == 1f -> "Meh..."
             ratingBar.rating == 2f -> "Tasty!"
             else -> "Superb!"
         }
-        addView(textView)
-
-
     }
-
 }
